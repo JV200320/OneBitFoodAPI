@@ -3,6 +3,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.1'
 
+gem 'friendly_id', '~> 5.4.0'
 gem 'rack-cors'
 gem 'ransack'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails', branch: 'main'

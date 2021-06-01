@@ -3,7 +3,7 @@ class RestaurantsController < ApplicationController
 
 
   def index
-    @restaurants = Restaurant.all
+    @restaurants = Restaurant.friendly.all
     filter_by_query if params[:q]
     filter_by_city if params[:city]
     filter_by_category if params[:category]
@@ -15,7 +15,7 @@ class RestaurantsController < ApplicationController
   private
 
   def set_restaurant
-    @restaurant = Restaurant.find(params[:id])
+    @restaurant = Restaurant.friendly.find(params[:id])
   end
 
   def filter_by_query
